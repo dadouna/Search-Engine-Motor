@@ -1,0 +1,107 @@
+Query																		HITS 				Relevance Score
+
+1. Info about the education Mathematics on graduate level at UC Davis		1
+Private_Tutoring.f 																				0 one hit only 
+
+2. Info Mathematics graduate UC Davis										5
+ECE_Course_Reviews.f																			0 course eval
+MattHh.f																						0 does not talk about math
+PhilipNeustrom.f																				0 about philip
+Private_Tutoring.f																				1 send u to UC Dav link
+What_I_Wish_I_Knew...Before_Coming_to_UC_Davis_Entomology.f										0 not relev
+
+
+nr of relevant documents are 3
+Precision	=	1/5 	= 	20 %
+Recall		=	1/100	= 	1 %															 																			
+
+
+
+
+3. education Mathematics graduate UC Davis									11							 
+Candidate_Statements.f																			0 stories											
+Elaine_Kasimatis.f																				0 personel
+Evelyn_Silvia.f    																				0 personel
+Events_Calendars.f																				0 kalendar
+Graduate_Groups.f																				2 information on topic (links)
+Linda_Katehi.f 																					0
+Private_Tutoring.f 																				1 a link to a math dep
+Student_Organizations.f 																		0
+The_Mary_Jeanne_Gilhooly_Award.f 																0
+UCD_Honors_and_Prizes.f 																		0
+University_Departments.f															 			1 some information on topic (link)
+
+nr of relevant documents are 3
+Precision = 	3/11	=  27.3 %
+Recall	  = 	3/100 	=  3 %
+
+4. Education graduate Math																		14
+
+2007-2010_Archive.f 																			0 nan
+Christine_Rogers.f 																				0 personel
+Discussion.f 																					0 nan
+Evelyn_Silvia.f 																				0 personel
+February_1%2C_2007.f 																			0 nan
+Getting_the_most_out_of_your_student_fees.f 													0 how to pay fees?
+Linda_Katehi.f 																					0 personnel
+November_30%2C_2006.f 																			0 nan
+Online_Courses.f 																				0 not mentioning the topic at all 
+Private_Tutoring.f 																				1 link to math department
+Summer_Sessions.f 																				0 summer classes 
+Sylvan_Learning_Center.f 																		0 about a teacher 
+Teenagers.f 																					0 about other than topic
+UCD_Alphabet_Soup.f 																			0 links
+
+
+nr of relevant documents 1
+precision 	= 	1/14 	= 	7.1 %
+recall 		=	1/100	= 	1 %
+
+
+5. Mathematics Graduate UC DAVIS Information													12 
+
+Candidate_Statements.f 																			0
+Computer_Science.f              	                 											2 from cs perspectie
+Economics.f 																					1 from economical perspectiv
+Linda_Katehi.f 																					0 personnel
+Mathematics.f 																					3 very relevant 
+MattHh.f 																						0 undergraduate level
+PhilipNeustrom.f 																				0 personnel
+Private_Tutoring.f 																				1 link to math ..  
+Society_for_Industrial_and_Applied_Mathematics.f 												1 info to a department
+Teaching_Assistants.f 																			0 not discussion the topic
+UCD_Honors_and_Prizes.f 																		0 prizes.
+What_I_Wish_I_Knew...Before_Coming_to_UC_Davis_Entomology.f 									2 giving some interesting infromation to gradstudents.
+
+nr of relevant documents 6
+precision 	= 		6/12	=  	50 % 
+recall 		= 		6/100	=	6 %
+
+
+
+6 Mathematics level Graduate UC DAVIS Information 												8
+
+Candidate_Statements.f 																			0
+Computer_Science.f 																				1
+Economics.f 																					1
+Mathematics.f 																					3
+Private_Tutoring.f 																				1
+Teaching_Assistants.f 																			0	
+UCD_Honors_and_Prizes.f 																		0
+What_I_Wish_I_Knew...Before_Coming_to_UC_Davis_Entomology.f 									2	
+
+nr of relevant documents 5
+precision 	= 	5/8		= 62.5 %
+recall 		= 	5/100	= 5 %
+
+7. UC DAVIS mathematics math level program 														6
+Computer_Science.f 																				2
+ECE_Course_Reviews.f 																			0 mentioning the topics
+Economics.f 																					2 
+Mathematics.f 																					3
+Private_Tutoring.f 																				1
+Statistics.f 																					2
+
+nr of relevant documents 5
+precision 	= 	5/6		= 83.3 %
+recall 		= 	5/100	= 5 %

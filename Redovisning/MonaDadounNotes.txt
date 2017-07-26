@@ -1,0 +1,41 @@
+1 Wildlife%2C_Fish%2C_and_Conservation_Biology 		0 	hard, they name the topic only.
+1 Elaine_Kasimatis 									0 	only talks about elaines background but it contains the words
+1 UC_Davis_English_Department 						0 	the words are there but not so myuch relevant
+1 Mathematics 										3 	the text discuss different mathematic fields as 
+														graduate programs that are offered.
+1 Computer_Science 									2 	it names the topic, discuss it from a cs perspective holding some mathematical subj
+1 Hydrology 										0 	6it mentions the topic
+1 Quantitative_Biology_and_Bioinformatics 			0 	mathemathics does not exist in the text online, maybe it's du to discrepancies?
+1 Statistics 										3 	it names the topic, discuss it from a statistical perspective 
+														which is relevant for mathematical aswell
+1 Private_Tutoring 									0 	contains the topic not so relevant, due the context
+1 Events_Calendars 									0 	contains the query terms, but not relevant.
+1 Candidate_Statements 								0 	contains the terms
+1 University_Departments 							1 	holds some maybe relevant informations since you can click on the 
+														links to get more info.
+1 UCD_Honors_and_Prizes 							0 	holds the query terms but does not discuss the topic, 
+														nor share the information needed.
+1 Biological_Systems_Engineering 					2 	relevant since it gives information about the topic.
+1 Evelyn_Silvia 									0 	most about a professor
+1 ECE_Course_Reviews 								2 	some description of themes of the topic, its like 
+														a given list of all the programs contains..
+1 MattHh 											1 	holds info about people having majors in mathematics..
+1 What_I_Wish_I_Knew...Before_Coming_to 			0 	contains the query terms but not so relevant for the 
+														topic
+1 Economics 										1 	economics undergraduate program needs mathematics...
+1 Fiber_and_Polymer_Science 						2 	graduate program within fiber involving math
+1 document_translated 								0 	not so interesting
+1 Student_Organizations 							0 	not relevant at all since it does not give any 
+														information at all about the topic.
+
+
+a good query suppose to have some correlation with my self, what am I searching for. If i just was searching for something i only remember words from it for Case 1: Searching for an article holding words "graduate" "programs" "mathemtics" then all the results listed are fair. 
+Case 2: Searching for documents holding graduate programs and some mathematics, then a better query would be using phrase query with only graduate program. and the search for mathematics. i.e. using biword
+Case 3: I really want to find all documents that only hold the query words then this could result in some hits, maybe none.
+
+svårt att sätta relevanse, att vi får tre ord utan kontext och måste själva hitta på en kontext jag tolkade det som att man vil veta mer och ett graduate program inom matematik.
+
+relevant 9
+non relevant 22-9 = 13
+precision = 9 / 22
+recall = 9 / 100

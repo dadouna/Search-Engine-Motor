@@ -1,0 +1,207 @@
+2.1 Ranked Retrieval
+We encourage you to try out different variants of the document length measurement
+lend, What are the effect of different length estimates?
+
+ANSWER: 
+The lenght is used to normalize the score value, 
+to get a fair representation of the scores. 
+The effect of different length will affect the 
+score so that the scores will be either higher 
+or lower for every query term.
+
+We will get a score, but it wont be as good as using angles (i.e. cosineScore). 
+So using euclidean distance would be a bad idea. Use angles instead.
+Euclidean example lecture 4 slide 22.
+
+2.2 Ranked Multiword Retrieval
+
+1#	Why do we use a union query here, but an intersection query in Assignment 1?
+answer: 
+We use a union query in ranked retrieval since we would like to get more documents holding the terms, and since we rank the documents, it does'nt matter how the terms appear in the documents since the highly ranked ones will appear in the top. 
+
+for example zombie attack would return both documnets holding only zombie or attack or zombie attack.
+
+I used intersection query in assignement 1 since we wanted to get all documents holding exactly the query terms. for example zombie attack had to appear in the retrieved documents otherwise not.
+
+
+2#	Look at the 10 highest ranked document returned by your search engine for each query.
+	Why are these documents ranked highly? Be prepared to explain this using pen and paper.
+answer:
+	De rankas högre för att:
+
+	1. antingen är dokumenten korta och innehåller söktermerna, 
+	2. eller så innehåller dokumenten de söktermerna många gånger relativt dokument storleken 
+	3. eller så innehåller inte andra dokument söktermen dvs söktermerna är mer sällsysnta. 
+
+	har du en term som förekommer i alla dokument så blir det 0. t.ex The zombie, då tillför inte "the" något värde. 
+	Sällsynta ord kommer därför att rankas högre.
+
+	de innehåller ord som är sällsynta och utan att kolla så skulle ett dokument som är kort få hög score också. 
+	Korta dokument är mer prioriterade för att man delar på längden. 
+	Oftast kommer korta dokument att bli högre prioriterade, oftast men det behöver inte vara så. 
+	exempel 
+
+	ett dokument på 10 ord som har 1 zombie då har vi 1 ord av 5 som är rätt.
+	och dokument på 100 ord som har 2 zombie då har vi 2 ord men på 50.
+	
+	Varje sökterm bidrar lite till scoren, vi loopar över alla sökertermer 
+	och adderar scoren. Vi kollar på frekvensen, vi kollar hur ofta termern 
+	förekommer i dokumenten och hur ofta termen förekommer i varje dokument.
+
+
+3# 	The central concept here is the vector model for query-document similarity. 
+	Explain this concept using pen and paper, and discuss how variations in tf representation 
+	(such as log(1+tf)) and document length representation (such as Euclidean length, or sqrt(#words)) 
+	affect the cosine similarity measure.
+
+	med log så pressar ner score skala så att den inte blir stor. wt,d = 1+lotf if tf > 0 else 0.
+
+	I
+	I   .
+	I  .   .
+	I .  .
+ 	I.  .
+	I  .
+	I . 
+	I  . . . .
+	  ----------
+
+
+2.3 What is a good search result?
+
+3# 	At the review, you will present three difficult cases. 
+
+	alla var svåra, men det viktigaste var att math förekom. De flesta innehöll inte orden, gav träffar på andra saker än graduate program math.
+	Professor exemplet som jobbade på math department.
+
+
+4# 	Plot a precision-recall graph for the returned top-50 list. (See dir) 
+	
+	compute the precision at 10, 20, 30, 40, and 50 (relevant documents = documents with relevance > 0). 
+	Assume the total number of relevant documents in the corpus to be 100, and estimate the recall at 10, 20, 30, 40, and 50.
+	CHECK
+	
+5# 	Compare the precision at 10, 20, 30, 40, 50 for ranked retrieval to the precision for
+	unranked retrieval. Which precision is the highest? Are there any trends?
+
+Ranked :	De första har högra ranking, men ju fler dokument ju lägre precision.
+Unranked :	Ju fler dokument som räknas in i precision ju högre precision men det är svårt att säga 
+			då det är färre dokument jämfört med Ranked.
+
+RANKED 									UNRANKED
+10 precision 0.5						10 precision 0.3
+20 precision 0.25						20 precision 0.45 
+30 precision 0.167
+40 precision 0.175
+50 precision 0.18
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+6# 	Do the same comparison of recalls. Which recall is the highest? Are there any correlation
+	between precision at 10, 20, 30, 40 , 50, recall at 10, 20, 30, 40, 50?
+
+Ranked 		: Ju fler dokument vi räknar med desto högre recall
+Unranked 	: Ju fler dokument vi räknar med desto högre recall.
+
+10 recall 0.05						10 recall 0.03
+20 recall 0.05						20 recall 0.09
+30 recall 0.05
+40 recall 0.07
+50 recall 0.09
+
+7# 	Does ranked retrieval in general give a 
+	
+	precision: 	antalet relevanta dokument delat på totala antalet relevanta dokument vi fick tillbaka
+				returnerar få dokument 
+	recall: 	relev fick tillbaka delat på totala antalet dokument som finns. 
+				returnerar flera dokuent.
+
+
+	higher or lower precision: ranked retrieval should in general give higher precision since, 
+	precision tar hänsyn till söktermerna. Det gör inte unranked, 
+	unranked kunde matcha konstigare saker. 
+
+	higher or lower recall: recall should also be better since we do take 
+	into account the terms by using score weightening,
+
+8# 	Explain the concepts precision-recall graph and precision at K, 
+	and give account for these measures for the returned ranked top-50 document list. 
+
+	Precision får högre värde ju färre dokument. eftersom att jag har scorat mina dokument på ett visst sätt så kommer 
+	precision att bli lägre till att börja med och sedan öka. 
+
+	Precision-recall graph 
+
+	precision är högre för de första 30 dokumenten än recall. Recall ökar vid 30 st dockument eftersom att jag har 
+	scorat det så i min fil.
+
+	precision at k 
+
+	plottat 50 högsta dokument 
+
+ # TASK 2.4
+
+ 1# the highest ranked document 30. What is the title? 
+answer: PICNIC DAY  
+
+kan vara ett event som man länkar till, kan vara många som  har sökt/ länkat till picnicday.
+
+mycket kretsar kring davis, att döma av titlarna ser man inga trend men det kan va davis som man länkar tiil.
+
+
+
+
+0. Math.f   2.45839
+1. TravisTaylor.f   0.98336
+2. Davis_Graduate.f   0.97290
+3. Grad_Students.f   0.97290
+4. The_Grad.f   0.97290
+5. GRE.f   0.72967
+6. EfremRensi.f   0.71232
+7. JulieB.f   0.64860
+8. EOP.f   0.63529
+9. Mentorships_for_Undergraduate_Research_in_Agriculture%2C_Letters%2C_and_Science.f   0.63529
+10. Wilfred.f   0.53067
+11. Planned_Education_Leave_Program.f   0.50823
+12. JillNi.f   0.48645
+13. Agricultural_Chemistry.f   0.48645
+14. DavidGeisler.f   0.44903
+15. APILP.f   0.42353
+16. ESLP.f   0.42353
+17. Bridge.f   0.42353
+18. UCDC.f   0.36302
+19. Pharmacology_and_Toxicology.f   0.33677
+20. Bridge_Outreach_and_Retention_Program.f   0.31764
+21. Elaine_Kasimatis.f   0.30984
+22. Elliott.f   0.30193
+23. Santani.f   0.29187
+24. Free_Munchies_at_Bars.f   0.26534
+25. JoshBurkart.f   0.25878
+26. SamSampson.f   0.25878
+27. UC_Davis_Wrestling.f   0.25412
+28. GradLink.f   0.25380
+29. 1927.f   0.24584
+30. DanielHoang.f   0.23349
+31. Graduate_Academic_Achievement_and_Advocacy_Program.f   0.22442
+32. Society_for_Industrial_and_Applied_Mathematics.f   0.22137
+33. East_Asian_Languages_and_Cultures.f   0.22097
+34. Evelyn_Silvia.f   0.21890
+35. 30-40_Something_Grad_Students.f   0.21356
+36. Yeni.f   0.21176
+37. ErikStaab.f   0.20848
+38. JamesShearer.f   0.19900
+39. MichaelTehranian.f   0.19667
+40. Western_Institute_for_Food_Safety_and_Security.f   0.19547
+41. UC_Davis_Women%27s_Gymnastics.f   0.19547
+42. SIAM.f   0.18911
+43. Meals_on_Wheels.f   0.18823
+44. Mathematics_ArXiv_front.f   0.18210
+45. Kraig%21Kraft%21.f   0.17689
+46. MotokiWu.f   0.17630
+47. McNair_Scholars_Program.f   0.17544
+48. Agricultural_%26_Environmental_Chemistry_Graduate_Group.f   0.17169
+49. ThucNghiNguyen.f   0.17169
+50. 1963.f   0.16941

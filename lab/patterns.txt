@@ -1,0 +1,31 @@
+//
+//  Information retrieval course
+//  First version: Johan Boye 2016
+//
+// In this file you can put your regular expressions
+// for matching non-standard words (like mail addresses).
+//
+// As you have probably already understood, lines beginning
+// with "//" are comments.
+
+// Twenty-four seven
+\d+/\d+
+
+// ADD YOUR PATTERNS HERE
+// Working differently
+// 1. matchar alla urler
+// 2. matchar alla mail
+// 3. matchar alla 1.2.3 1:23 osv
+// 4. matchar shortens forkortningar t.ex. U.S.A
+// 5. matchar alla som innehaller tecken -.,...
+// 6. matchar alla ord som borjar med apostrof
+// 7. matchar 2 bindestreck
+
+//Here is the working ones 
+(http)+s?:+\/+(\w+[\/.:?#+]?)*\s*
+\w+[\w\-_.]*\w+@\w+[\w.]*\w+
+\d*[.\-,:+]+([.\-,:+]?\d+)+
+[a-zA-Z]\.([a-zA-Z]\.)+
+\w+[\-,.']\w+
+[']\w+$
+--

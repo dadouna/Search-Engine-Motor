@@ -1,0 +1,12 @@
+Experiment:
+
+Simple idea.
+1	-	Design an inital query
+2 	- 	Calculate precision and recall for the returned result, (limited to a certain number of documents)
+3	-	Give relevans feedback on the results recieved.
+4	-	A new modified query is created and used for the search.
+5	-	Calculate precision and recall for the returned result, (limited to a certain number of documents)
+6	-	Repeat until satisfied.
+
+(blir biased kolla i slutet av boken. En kollektion man tränar på för original query, och en kollektion som testar sin nya query på
+detta för att undvika bias som kan uppstå)
